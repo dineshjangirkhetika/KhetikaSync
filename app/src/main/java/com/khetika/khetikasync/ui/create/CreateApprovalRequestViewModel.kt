@@ -23,7 +23,6 @@ import javax.inject.Inject
 data class CreateRequestUiState(
     val title: String = "",
     val description: String = "",
-    val department: String? = null,
     val category: String? = null,
     val priority: String = "Normal",
     val files: List<PickedFile> = emptyList(),
@@ -37,7 +36,6 @@ data class CreateRequestUiState(
     val canSubmit: Boolean
         get() = !isSubmitting &&
             title.isNotBlank() &&
-            !department.isNullOrBlank() &&
             !category.isNullOrBlank() &&
             (1..levels).all { lvl -> !approverEmailByLevel[lvl].isNullOrBlank() }
 }
@@ -50,28 +48,6 @@ class CreateApprovalRequestViewModel @Inject constructor(
     private val fileRepository: FileRepository,
 ) : ViewModel() {
 
-    val departments: List<String> = listOf(
-        "Admin",
-        "Commercial",
-        "Finance",
-        "Human Resource",
-        "Khetika Saathi",
-        "Marketing",
-        "Operations",
-        "Operations Fresh",
-        "Operations Grocery",
-        "Quality",
-        "Quality Assurance",
-        "Sales",
-        "Sales - DFM & Spices",
-        "Sales - Fresh",
-        "Sales - GT East",
-        "Sales - NPD & Support",
-        "Sales - Superzop",
-        "Spices Division",
-        "Supply Chain",
-        "Technology",
-    )
     val categories: List<String> = listOf(
         "Vendor", "Legal", "Expense", "Procurement", "HR", "Other"
     )
@@ -87,16 +63,6 @@ class CreateApprovalRequestViewModel @Inject constructor(
 
     fun onDescriptionChange(value: String) {
         _uiState.value = _uiState.value.copy(description = value)
-    }
-
-    fun onDepartmentSelected(value: String) {
-        // Department change invalidates any cached approver suggestions.
-        searchJobs.values.forEach { it.cancel() }
-        searchJobs.clear()
-        _uiState.value = _uiState.value.copy(
-            department = value,
-            suggestionsByLevel = emptyMap(),
-        )
     }
 
     fun onCategorySelected(value: String) {
@@ -143,9 +109,7 @@ class CreateApprovalRequestViewModel @Inject constructor(
         searchJobs[level] = viewModelScope.launch {
             delay(200)
             val me = authRepository.currentUser?.uid
-            // Only the request's selected department can be approvers.
-            val dept = _uiState.value.department
-            val results = userRepository.searchByEmailPrefix(email, department = dept)
+            val results = userRepository.searchByEmailPrefix(email)
                 .filter { it.firebaseUid != me }
             _uiState.value = _uiState.value.copy(
                 suggestionsByLevel = _uiState.value.suggestionsByLevel + (level to results),
@@ -194,14 +158,12 @@ class CreateApprovalRequestViewModel @Inject constructor(
                     requesterUid = firebaseUser.uid,
                     title = state.title.trim(),
                     description = state.description.trim().ifBlank { null },
-                    department = state.department!!,
+                    department = null,
                     category = state.category,
                     priority = state.priority,
                     fileName = null,
                     fileUri = null,
                     levels = state.levels,
-                    // requesterUid is the only field that needs to come from auth;
-                    // the rest are user-supplied.
                 )
                 approvalRepository.createRequest(request, approverUids, uploadedFiles)
             }.onSuccess {

@@ -9,7 +9,7 @@ data class ApprovalRequestDto(
     @SerialName("requester_uid") val requesterUid: String,
     @SerialName("title") val title: String,
     @SerialName("description") val description: String? = null,
-    @SerialName("department") val department: String,
+    @SerialName("department") val department: String? = null,
     @SerialName("category") val category: String? = null,
     @SerialName("priority") val priority: String = "Normal",
     @SerialName("file_name") val fileName: String? = null,

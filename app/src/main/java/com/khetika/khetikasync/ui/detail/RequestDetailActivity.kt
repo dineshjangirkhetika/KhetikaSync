@@ -289,12 +289,8 @@ private fun RequestSummaryCard(
             }
             Spacer(Modifier.height(4.dp))
             Text(
-                text = buildString {
-                    append(request.department)
-                    request.category?.let { append(" · "); append(it) }
-                    append(" · ")
-                    append(request.priority)
-                },
+                text = listOfNotNull(request.department, request.category, request.priority)
+                    .joinToString(" · "),
                 style = MaterialTheme.typography.bodySmall,
             )
             requester?.let {

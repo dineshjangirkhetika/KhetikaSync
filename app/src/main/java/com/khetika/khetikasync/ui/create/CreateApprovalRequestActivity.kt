@@ -160,13 +160,6 @@ private fun CreateRequestRoute(
             )
 
             SingleSelectDropdown(
-                label = stringResource(R.string.registration_department_label),
-                value = state.department.orEmpty(),
-                options = viewModel.departments,
-                onSelected = viewModel::onDepartmentSelected,
-            )
-
-            SingleSelectDropdown(
                 label = stringResource(R.string.create_request_category_label),
                 value = state.category.orEmpty(),
                 options = viewModel.categories,

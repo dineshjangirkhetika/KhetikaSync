@@ -558,10 +558,13 @@ private fun RequestCard(
             Spacer(Modifier.height(4.dp))
             Text(
                 text = buildString {
-                    append(request.department)
-                    request.category?.let { append(" · "); append(it) }
-                    append(" · "); append(request.priority)
-                    append(" · "); append("${request.levels} level${if (request.levels > 1) "s" else ""}")
+                    val parts = listOfNotNull(
+                        request.department,
+                        request.category,
+                        request.priority,
+                        "${request.levels} level${if (request.levels > 1) "s" else ""}",
+                    )
+                    append(parts.joinToString(" · "))
                 },
                 style = MaterialTheme.typography.bodySmall,
             )
@@ -604,7 +607,14 @@ private fun PendingActionCard(
             }
             Spacer(Modifier.height(4.dp))
             Text(
-                text = "${req.department} · ${req.category ?: "—"} · Level ${active?.level ?: "?"}/${req.levels}",
+                text = buildString {
+                    val parts = listOfNotNull(
+                        req.department,
+                        req.category,
+                        "Level ${active?.level ?: "?"}/${req.levels}",
+                    )
+                    append(parts.joinToString(" · "))
+                },
                 style = MaterialTheme.typography.bodySmall,
             )
         }
