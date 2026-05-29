@@ -52,7 +52,7 @@ Approvals across departments are currently managed through emails, WhatsApp mess
 
 - **Multi-level approval workflow (1–3 levels)** with automatic routing — once Level 1 approves, the request advances to Level 2 automatically via a SQL view, all the way through to the final approval.
 - **Push notifications** via FCM for every status change (submit, approve, reject, send-back, resubmit, manual remind, final approval). Tapping a notification deep-links straight to the Request Detail screen.
-- **Email-based approver selection scoped to department** — type any part of an email and pick from live-suggested verified users in the same department.
+- **Email-based approver selection** — type any part of an email and pick from live-suggested verified users.
 - **Multi-file attachments** uploaded to Supabase Storage; old files are kept on resubmit so the audit trail is complete.
 - **Resubmit after Send Back** — requester attaches revised files + a note; all steps reset to pending and Level 1 is notified again.
 - **In-app notifications inbox** with unread badge on the home bell, card-based list, and "mark all read".

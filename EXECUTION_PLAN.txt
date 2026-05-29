@@ -72,9 +72,8 @@ Phase 2 — Database & RLS                                                 [DONE
   that powers approver routing.
 
 Phase 3 — Request creation                                               [DONE]
-  Title, description, department, category, priority, multi-file upload to
-  Supabase Storage, typed-email approver picker scoped to department,
-  1–3 approval levels.
+  Title, description, category, priority, multi-file upload to Supabase
+  Storage, typed-email approver picker, 1–3 approval levels.
 
 Phase 4 — Multi-level approval engine                                    [DONE]
   Approve / Reject / Send back / Comment. Automatic routing through levels
@@ -178,8 +177,8 @@ Build                : AGP 8.10.1, Compose Compiler plugin
     a level approves.
  2. Push notifications via FCM with deep-link straight to Request Detail
     (works foreground, background, and killed).
- 3. Email-based approver selection scoped to the selected department, with
-    debounced live autocomplete.
+ 3. Email-based approver selection with debounced live autocomplete from
+    the verified user pool.
  4. Multi-file attachments uploaded to Supabase Storage. Previous files
     preserved on resubmit for audit trail.
  5. Resubmit after Send Back with new files + comment. Resets steps to
