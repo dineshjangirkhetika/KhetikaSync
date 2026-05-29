@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="240dp"
+    android:height="240dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!--
+        Khetika Sync splash mark.
+        Two concentric rings give the icon a "seal of approval" feel.
+        A bold white check fills the inner circle.
+        Background is transparent — the screen colour comes from windowSplashScreenBackground.
+    -->
+
+    <!-- Outer thin ring (soft) -->
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"
+        android:pathData="M54,8 a46,46 0 1 0 0,92 a46,46 0 1 0 0,-92 Z" />
+
+    <!-- Inner ring (more visible) -->
+    <path
+        android:strokeColor="#80FFFFFF"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:pathData="M54,18 a36,36 0 1 0 0,72 a36,36 0 1 0 0,-72 Z" />
+
+    <!-- Big bold white checkmark, centered inside the inner ring -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="12"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M32,55 L48,72 L78,36" />
+</vector>

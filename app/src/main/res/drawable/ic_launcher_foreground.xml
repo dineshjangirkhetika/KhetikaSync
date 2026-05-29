@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!--
+        Khetika Sync custom mark.
+        A subtle white badge ring with a bold checkmark inside.
+        All content stays within the 72x72dp safe zone (18..90 on each axis)
+        so it never gets clipped by adaptive-icon masks (circle/squircle/etc.).
+    -->
+
+    <!-- Soft badge ring behind the checkmark. -->
+    <path
+        android:strokeColor="#33FFFFFF"
+        android:strokeWidth="3"
+        android:fillColor="#00000000"
+        android:pathData="M54,22 a32,32 0 1 0 0,64 a32,32 0 1 0 0,-64 Z" />
+
+    <!-- Bold white checkmark. -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="10"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000"
+        android:pathData="M34,56 L48,70 L76,38" />
+</vector>

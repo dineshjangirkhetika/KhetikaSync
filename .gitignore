@@ -1,0 +1,45 @@
+# ============================================================
+# Gradle / build outputs
+# ============================================================
+.gradle/
+/build
+/app/build
+/app/release
+captures/
+.externalNativeBuild
+.cxx
+
+# ============================================================
+# IDE / OS noise
+# ============================================================
+*.iml
+/.idea/
+.DS_Store
+Thumbs.db
+.vscode/
+.fleet/
+
+# ============================================================
+# Secrets — DO NOT COMMIT
+# ============================================================
+# Supabase URL/anon key, Firebase web client ID, SDK path.
+local.properties
+# Firebase service account JSON used by the Edge Function for push.
+khetika-sa.json
+*-service-account*.json
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# ============================================================
+# Logs
+# ============================================================
+*.log
+hs_err_pid*
+
+# ============================================================
+# Supabase CLI working files
+# ============================================================
+supabase/.branches
+supabase/.temp

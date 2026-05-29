@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Khetika Sync</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="welcome_title">Welcome to Khetika Sync</string>
+    <string name="welcome_subtitle">Centralized approval workflow for every department</string>
+    <string name="sign_out">Sign out</string>
+    <string name="home_welcome">Welcome, %1$s</string>
+    <string name="sign_in_failed">Sign in failed. Please try again.</string>
+    <string name="registration_title">Finish setting up</string>
+    <string name="registration_subtitle">Tell us which team you\'re on so approvals route the right way.</string>
+    <string name="registration_department_label">Department</string>
+    <string name="registration_role_label">Role</string>
+    <string name="registration_continue">Continue</string>
+    <string name="registration_footnote">You can ask an admin to change these later.</string>
+
+    <string name="home_title">Approvals</string>
+    <string name="home_all_departments">All departments</string>
+    <string name="home_empty">No approval requests for this filter.</string>
+
+    <string name="create_request_title">New approval request</string>
+    <string name="create_request_title_label">Title</string>
+    <string name="create_request_description_label">Description (optional)</string>
+    <string name="create_request_pick_file">Attach file</string>
+    <string name="create_request_no_file">No file selected</string>
+    <string name="create_request_levels_label">Approval levels</string>
+    <string name="create_request_level_n">Level %1$d approver</string>
+    <string name="create_request_loading_approvers">Loading…</string>
+    <string name="create_request_no_approvers">No other verified users yet.</string>
+    <string name="create_request_submit">Submit request</string>
+    <string name="create_request_category_label">Category</string>
+    <string name="create_request_priority_label">Priority</string>
+
+    <string name="home_section_pending_for_me">Pending your action (%1$d)</string>
+    <string name="home_section_my_requests">Your requests (%1$d)</string>
+    <string name="home_section_approved_by_me">Approved by me (%1$d)</string>
+
+    <string name="detail_title">Request detail</string>
+    <string name="detail_not_found">Request not found.</string>
+    <string name="detail_priority_label">Priority</string>
+    <string name="detail_requested_by">Requested by %1$s</string>
+    <string name="detail_created_at">Created %1$s</string>
+    <string name="detail_steps_title">Approval steps</string>
+    <string name="detail_level_n">Level %1$d</string>
+    <string name="detail_acted_at">Acted %1$s</string>
+    <string name="detail_your_action">Your action</string>
+    <string name="detail_comment_label">Comment (optional)</string>
+    <string name="detail_approve">Approve</string>
+    <string name="detail_reject">Reject</string>
+    <string name="detail_send_back">Send back</string>
+    <string name="detail_attachments">Attachments</string>
+    <string name="detail_resubmit_title">Resubmit</string>
+    <string name="detail_resubmit_subtitle">Attach the revised file(s) and resubmit. Approval steps reset to pending and the first approver is notified. Previous attachments are kept for history.</string>
+    <string name="detail_resubmit">Resubmit request</string>
+    <string name="detail_resubmit_attach_files">Attach revised files</string>
+    <string name="detail_resubmit_no_new_files">No new files attached.</string>
+
+    <string name="detail_remind_title">Need a nudge?</string>
+    <string name="detail_remind_subtitle_named">Send %1$s a reminder that this request is awaiting their action at Level %2$d.</string>
+    <string name="detail_remind_subtitle_unknown">No active approver found.</string>
+    <string name="detail_remind_button">Remind approver</string>
+    <string name="detail_reminder_sent">Reminder sent.</string>
+    <string name="detail_delete">Delete request</string>
+    <string name="detail_delete_title">Delete this request?</string>
+    <string name="detail_delete_message">This permanently removes the request, all approval steps, files, and notifications. This cannot be undone.</string>
+    <string name="detail_delete_confirm">Delete</string>
+
+    <string name="create_request_pick_files">Attach files</string>
+    <string name="create_request_level_n_email">Level %1$d approver email</string>
+    <string name="create_request_email_placeholder">e.g. asha.menon@khetika.test</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="profile_department">Department</string>
+    <string name="profile_role">Role</string>
+
+    <string name="home_notifications">Notifications</string>
+    <string name="home_mark_all_read">Mark all read</string>
+    <string name="home_no_notifications">No notifications yet.</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="home_status_label">Status</string>
+    <string name="home_all_statuses">All statuses</string>
+    <string name="home_search_hint">Search requests by title…</string>
+    <string name="home_search_empty">No requests match that title.</string>
+    <string name="home_search_results">Results (%1$d)</string>
+    <string name="home_filter_approved_by_me">Approved by me</string>
+
+    <string name="registration_pin_label">Set 4-digit PIN</string>
+    <string name="registration_confirm_pin_label">Confirm PIN</string>
+    <string name="registration_pin_invalid">PIN must be exactly 4 digits.</string>
+    <string name="registration_pin_mismatch">PINs do not match.</string>
+
+    <string name="login_email_label">Email</string>
+    <string name="login_pin_label">4-digit PIN</string>
+    <string name="login_sign_in">Sign in</string>
+    <string name="login_or">OR</string>
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "838190240174",
+    "project_id": "khetika-sync",
+    "storage_bucket": "khetika-sync.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838190240174:android:03311b4ed8cabe718db83f",
+        "android_client_info": {
+          "package_name": "com.khetika.khetikasync"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838190240174-qarujji6l76394fg1atrrpgjog9vd428.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.khetika.khetikasync",
+            "certificate_hash": "74fcfe3b3902b881d788abff6898b273f8bed166"
+          }
+        },
+        {
+          "client_id": "838190240174-nhj12s7eg2ggeufr8nh9p97u42q66oga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaWNxzIX53507aG3iljuTM09mD_QWp-Xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838190240174-nhj12s7eg2ggeufr8nh9p97u42q66oga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
