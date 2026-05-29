@@ -153,12 +153,18 @@ class CreateApprovalRequestViewModel @Inject constructor(
                     picked.displayName to url
                 }
 
-                // 3) Create the request + step rows + file rows.
+                // 3) Auto-capture the requester's department from their profile
+                //    so cards/filters keep working without the user picking one.
+                val userDepartment = runCatching {
+                    userRepository.getUserByFirebaseUid(firebaseUser.uid)?.department
+                }.getOrNull()
+
+                // 4) Create the request + step rows + file rows.
                 val request = ApprovalRequestDto(
                     requesterUid = firebaseUser.uid,
                     title = state.title.trim(),
                     description = state.description.trim().ifBlank { null },
-                    department = null,
+                    department = userDepartment,
                     category = state.category,
                     priority = state.priority,
                     fileName = null,
