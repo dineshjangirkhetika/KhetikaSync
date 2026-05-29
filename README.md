@@ -155,7 +155,3 @@ KhetikaSync/
 │   └── migrations/                   # 001–012 schema + seeds + triggers
 └── README.md
 ```
-
-## License
-
-Internal / demo project. No license attached.
