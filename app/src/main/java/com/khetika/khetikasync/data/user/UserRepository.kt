@@ -85,7 +85,6 @@ class UserRepository @Inject constructor(
 
     suspend fun searchByEmailPrefix(
         prefix: String,
-        department: String? = null,
         limit: Long = 6,
     ): List<UserDto> {
         val normalized = prefix.trim().lowercase()
@@ -96,7 +95,6 @@ class UserRepository @Inject constructor(
                     filter {
                         eq("is_verified", true)
                         ilike("email", "$normalized%")
-                        department?.let { eq("department", it) }
                     }
                     limit(limit)
                 }
